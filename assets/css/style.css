@@ -710,7 +710,7 @@ footer .copyright {
 /* about page */
 
 #page-header.about-header {
-  background-image: url(images/about/banner.png);
+  background-image: url(/assets/images/about/banner.png);
  }
 
  #about-head {
@@ -972,7 +972,7 @@ footer .copyright {
 /* loginform */
 
 #page-header.Login-header {
-  background-image: url(images/about/banner.png);
+  background-image: url(/assets/images/about/banner.png);
  }
 
 .form-container {

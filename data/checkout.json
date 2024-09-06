@@ -1,0 +1,26 @@
+{
+    "checkout_form": {
+      "first_name": "",
+      "last_name": "",
+      "email_address": "",
+      "phone_number": "",
+      "country": ["India", "Pakistan", "Russia", "England", "Nepal"],
+      "state_division": ["UP", "MP", "Bihar", "Delhi", "Jharkhand"],
+      "address_line_1": "",
+      "address_line_2": "",
+      "postal_code": "",
+      "company": ["Microsoft", "Xiaomi", "Apple", "Samsung", "Motorola"],
+      "create_account": false
+    },
+    "cart_totals": {
+      "subtotal": "$230.00",
+      "shipping": "$20.00",
+      "total": "$250.00"
+    },
+    "payment_methods": [
+      "Check Payments",
+      "Cash On Delivery",
+      "PayPal"
+    ]
+  }
+  

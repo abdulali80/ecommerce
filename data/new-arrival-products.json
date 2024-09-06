@@ -1,0 +1,69 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Casual Men's Shirt",
+        "brand": "adidas",
+        "price": 100,
+        "image": "assets/images/products/n1.jpg",
+        "rating": 5
+      },
+      {
+        "id": 2,
+        "name": "Casual Men's Shirt",
+        "brand": "adidas",
+        "price": 100,
+        "image": "assets/images/products/n2.jpg",
+        "rating": 5
+      },
+      {
+        "id": 3,
+        "name": "Casual Men's Shirt",
+        "brand": "adidas",
+        "price": 100,
+        "image": "assets/images/products/n3.jpg",
+        "rating": 5
+      },
+      {
+        "id": 4,
+        "name": "Cartoon Astronaut T-Shirts",
+        "brand": "adidas",
+        "price": 100,
+        "image": "assets/images/products/n4.jpg",
+        "rating": 5
+      },
+      {
+        "id": 5,
+        "name": "Casual Men's Shirt",
+        "brand": "adidas",
+        "price": 100,
+        "image": "assets/images/products/n5.jpg",
+        "rating": 5
+      },
+      {
+        "id": 6,
+        "name": "Astronaut Short Pent",
+        "brand": "adidas",
+        "price": 100,
+        "image": "assets/images/products/n6.jpg",
+        "rating": 5
+      },
+      {
+        "id": 7,
+        "name": "Casual Men's Shirt",
+        "brand": "adidas",
+        "price": 100,
+        "image": "assets/images/products/n7.jpg",
+        "rating": 5
+      },
+      {
+        "id": 8,
+        "name": "Cartoon Astronaut T-Shirts",
+        "brand": "adidas",
+        "price": 100,
+        "image": "assets/images/products/n8.jpg",
+        "rating": 5
+      }
+    ]
+  }
+  

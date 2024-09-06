@@ -1,0 +1,16 @@
+{
+    "cartAdd": {
+      "coupon": {
+        "title": "Apply Coupon",
+        "inputPlaceholder": "Enter Your Coupon",
+        "buttonText": "Apply"
+      },
+      "totals": {
+        "cartSubtotal": 335,
+        "shipping": "Free",
+        "total": 335,
+        "checkoutButtonText": "Proceed to Checkout"
+      }
+    }
+  }
+  

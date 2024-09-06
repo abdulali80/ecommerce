@@ -1,0 +1,44 @@
+{
+    "blogs": [
+        {
+            "id": 1,
+            "title": "Cotton-Jersey Zip-Up Hoodie",
+            "date": "13/01",
+            "image": "assets/images/blog/b1.jpg",
+            "excerpt": "Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony . godard...",
+            "url": "#"
+        },
+        {
+            "id": 2,
+            "title": "How to Style a Quiff",
+            "date": "13/01",
+            "image": "assets/images/blog/b2.jpg",
+            "excerpt": "Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony . godard...",
+            "url": "#"
+        },
+        {
+            "id": 3,
+            "title": "Must-Have Skater Girl Items",
+            "date": "13/01",
+            "image": "assets/images/blog/b3.jpg",
+            "excerpt": "Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony . godard...",
+            "url": "#"
+        },
+        {
+            "id": 4,
+            "title": "Runway-Inspired Trends",
+            "date": "13/01",
+            "image": "assets/images/blog/b4.jpg",
+            "excerpt": "Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony . godard...",
+            "url": "#"
+        },
+        {
+            "id": 5,
+            "title": "AW20 Menswear Trends",
+            "date": "13/01",
+            "image": "assets/images/blog/b5.jpg",
+            "excerpt": "Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony . godard...",
+            "url": "#"
+        }
+    ]
+}
