@@ -2,43 +2,54 @@ $(document).ready(function () {
     loadCart();
     loadCartadd();
 });
-function loadCart() {   
-    // Fetch the cart data
-    $.getJSON('data/cart', function (data) {
-        let cartItems = data.cart;
-        let html = '';
 
-        // Loop through the cart items
+function loadCart() {
+    // Fetch the cart data from cart.json
+    $.getJSON('data/cart.json', function (data) {
+        let cartItems = data.cart;  // Get the cart array from JSON
+        let html = '';              // Variable to hold generated HTML
+
+        // Loop through each item in the cart
         $.each(cartItems, function (index, item) {
             html += `
                 <tr>
                     <td><a href="#"><i class="far fa-times-circle"></i></a></td>
-                    <td><img src="${item.image}" alt=""></td>
+                    <td><img src="${item.image}" alt="${item.product}"></td>
                     <td>${item.product}</td>
                     <td>$${item.price.toFixed(2)}</td>
-                    <td><input type="number" value="${item.quantity}" name="" id=""></td>
+                    <td><input type="number" value="${item.quantity}" class="cart-quantity" data-index="${index}" min="1"></td>
                     <td>$${item.subtotal.toFixed(2)}</td>
                 </tr>
             `;
         });
 
         // Insert the generated HTML into the table body
-        $('#cart-items').html(html);
+        $('section#cart tbody').html(html);
+    }).fail(function() {
+        console.error('Failed to load cart data.');
     });
-};
+}
 
 
 
-$(document).ready(function () {
-    // AJAX request to fetch cart-add.json
+
+
+
+
+
+// $(document).ready(function () {
+//     loadCartadd();  // Call the function to load the cart-add section
+// });
+
+function loadCartadd() {
     $.ajax({
-        url: 'cart-add.json', // Replace with the path to your JSON file
+        url: 'data/cart-add.json', // Ensure this path is correct
         method: 'GET',
         dataType: 'json',
         success: function (response) {
             const cartAdd = response.cartAdd;
 
-            // Populate coupon section
+            // Populate the coupon section
             $('#coupon').html(`
                 <h3>${cartAdd.coupon.title}</h3>
                 <div>
@@ -47,7 +58,7 @@ $(document).ready(function () {
                 </div>
             `);
 
-            // Populate subtotal section
+            // Populate the subtotal section
             $('#subtotal').html(`
                 <h3>Cart Totals</h3>
                 <table>
@@ -73,4 +84,4 @@ $(document).ready(function () {
             console.error("Error fetching the cart data", error);
         }
     });
-});
+}

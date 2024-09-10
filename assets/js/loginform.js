@@ -1,14 +1,17 @@
 $(document).ready(function () {
     loadLoginform();
 });
+
 function loadLoginform() {
     $.ajax({
-        url: 'data/loginform',
+        url: 'data/loginform.json', // Make sure your path is correct and includes the '.json' extension
         dataType: 'json',
         success: function (data) {
-            // For login form
+            // Clear out the existing form contents (in case of reload)
             const loginForm = $('#loginForm');
-            loginForm.html('');
+            loginForm.empty();
+
+            // Append the login form fields
             data.login.fields.forEach(field => {
                 loginForm.append(`
                     <div class="input-group">
@@ -34,12 +37,14 @@ function loadLoginform() {
                 </div>
             `);
 
-            // Submit button
+            // Submit button for login form
             loginForm.append(`<button type="submit" class="submit-btn">${data.login.submitText}</button>`);
 
-            // For register form
+            // Clear out the existing register form contents
             const registerForm = $('#registerForm');
-            registerForm.html('');
+            registerForm.empty();
+
+            // Append the register form fields
             data.register.fields.forEach(field => {
                 if (field.type === 'radio') {
                     let radioGroup = '<div class="input-group"><div class="radio-group">';
@@ -65,7 +70,8 @@ function loadLoginform() {
             registerForm.append(`<button type="submit" class="submit-btn">${data.register.submitText}</button>`);
         },
         error: function (err) {
-            console.log("Error loading JSON", err);
+            console.error("Error loading JSON", err);
         }
     });
 }
+

@@ -1,11 +1,12 @@
 $(document).ready(function () {
-    loadConatctdetails();
+    loadContactDetails();
     loadFormdetailscontact();
 });
-function loadConatctdetails() {    
+
+function loadContactDetails() {    
     // Fetching the JSON data using AJAX
     $.ajax({
-        url: 'data/contact-details.json',  // Assuming the JSON file is named 'contact.json' and located in the project folder
+        url: 'data/contact-details.json',  // Path to your JSON file
         method: 'GET',
         dataType: 'json',
         success: function (data) {
@@ -16,7 +17,7 @@ function loadConatctdetails() {
                 <span>${contactDetails.title}</span>
                 <h2>${contactDetails.subtitle}</h2>
                 <h3>${contactDetails.companyName}</h3>
-                <div>
+                <ul>
                     <li>
                         <i class="${contactDetails.location.icon}"></i>
                         <p>${contactDetails.location.address}</p>
@@ -33,11 +34,11 @@ function loadConatctdetails() {
                         <i class="${contactDetails.hours.icon}"></i>
                         <p>${contactDetails.hours.timing}</p>
                     </li>
-                </div>
+                </ul>
             `);
 
-            // Adding the map iframe
-            $('.map').html(`
+            // Injecting the map iframe
+            $('#contact-details .map').html(`
                 <iframe src="${contactDetails.map.iframeSrc}" width="${contactDetails.map.width}" height="${contactDetails.map.height}" style="${contactDetails.map.style}" allowfullscreen="" loading="${contactDetails.map.loading}" referrerpolicy="${contactDetails.map.referrerPolicy}"></iframe>
             `);
         },
@@ -46,7 +47,6 @@ function loadConatctdetails() {
         }
     });
 }
-
 
 
 function loadFormdetailscontact() {
@@ -61,7 +61,7 @@ function loadFormdetailscontact() {
 
             data.formDetails.form.fields.forEach(field => {
                 if (field.type === "textarea") {
-                    formHTML += `<textarea placeholder="${field.placeholder}"></textarea>`;
+                    formHTML += `<textarea placeholder="${field.placeholder}" cols="30" rows="10"></textarea>`;
                 } else {
                     formHTML += `<input type="${field.type}" placeholder="${field.placeholder}">`;
                 }
@@ -69,19 +69,21 @@ function loadFormdetailscontact() {
 
             formHTML += `<button class="normal">${data.formDetails.form.button}</button>`;
 
+            // Inject form content into the form element
             $('#form-details form').html(formHTML);
 
             // Dynamically create the people section
             let peopleHTML = '';
             data.formDetails.people.forEach(person => {
                 peopleHTML += `<div>
-                                <img src="${person.image}" alt="">
+                                <img src="${person.image}" alt="${person.name}">
                                 <p><span>${person.name}</span> ${person.role} <br>
                                 Phone: ${person.phone} <br>
                                 Email: ${person.email}</p>
                                </div>`;
             });
 
+            // Inject people content into the .people element
             $('#form-details .people').html(peopleHTML);
         },
         error: function (err) {
@@ -89,4 +91,5 @@ function loadFormdetailscontact() {
         }
     });
 }
+
 
