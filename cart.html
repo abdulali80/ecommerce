@@ -10,6 +10,8 @@
         <link rel="stylesheet" href="assets/css/style.css">
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/cart.js"></script>
+
+
     </head>
 
     <body>
@@ -24,9 +26,13 @@
                         <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
                         <li><a href="loginform.html">Login</a></li>
-                        <li><a href="checkout.html">Checkout</a></li>
                         <li id="lg-bag"><a class="active" href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
-                        <a href="#" id="close"><i class="fas fa-times"></i></a>
+                        <a href="#" id="close"><i class="fas fa-times"></i>
+
+                        <div id="cart-button">
+                            <a href="cart.html"></a>
+                            <span id="cart-count">0</span> 
+                     </div>
                     </ul>
                 </div>
                 <div id="mobile">
@@ -83,31 +89,35 @@
 
            <section id="cart-add" class="section-p1">
             <div id="coupon">
-                <!-- <h3>Apply Coupon</h3>
+                <h3>Apply Coupon</h3>
                 <div>
                     <input type="text" placeholder="Enter Your Coupon">
                     <button class="normal">Apply</button>
-                </div> -->
+                </div>
             </div>
 
             <div id="subtotal">
-                <!-- <h3>Cart Totals</h3>
+                <h3>Cart Totals</h3>
                 <table>
                     <tr>
                         <td>Cart Subtotal</td>
-                        <td>$ 335</td>
+                        <td><span id="subTotal"></span></td>
                     </tr>
                     <tr>
                         <td>Shipping</td>
-                        <td>Free</td>
+                        <td><span id="shipment">10</span></td>
                     </tr>
                     <tr>
                         <td><strong>Total</strong></td>
-                        <td><strong>$ 335</strong></td>
+                        <td><strong><span id="total"></span></strong></td>
                     </tr>
                 </table>
-                <button class="normal">Proceed to Checkout</button> -->
+                <a href="checkout.html" class="normal"><button class="normal">Proceed to Checkout</button></a>
             </div>
+            <!-- <button class="normal" >Proceed to Checkout</button> -->
+           </section>
+
+           <section id="headerr">
            </section>
 
            <footer class="section-p1">
